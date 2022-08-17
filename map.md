@@ -39,7 +39,7 @@ Sample Output
 0
 ```
 
-###theory
+### theory
 ```
 Map Template:
 
@@ -63,4 +63,37 @@ Ex: map<string,int>::iterator itr=m.find("Maps"); //If Maps is not present as th
 Accessing the value stored in the key:
 
 To get the value stored of the key "MAPS" we can do m["MAPS"] or we can get the iterator using the find function and then by itr->second we can access the value.
+```
+## map gfg example
+```cpp
+
+/* Adds a value with key x and value y to the map*/
+void add_value(map<int,int> &m,int x,int y)
+{
+    //Your code here
+    m[x]=y;
+}
+
+/* Returns the value of the key
+ x if present else returns -1 */
+int find_value(map<int,int> &m,int x)
+{
+  //Your code here
+  auto it=m.find(x);
+  if(it==m.end()){
+      return -1;
+      
+  }
+  else 
+    return (*it).second;
+}
+
+/* Prints contents of the map ie keys and values*/
+void print_contents(map<int,int> &m)
+{
+   //Your code here
+   for(auto &val:m){
+       cout<<val.first<<" "<<val.second<<" ";
+   }
+}
 ```
