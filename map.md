@@ -103,6 +103,9 @@ void print_contents(map<int,int> &m)
 #include<bits/stdc++.h>
 using namespace std;
 //print unique string with their lexographical order with frequency
+ 
+
+
 int main(){
     map<string,int> m;
     int n=5;
@@ -116,6 +119,14 @@ int main(){
         else{
             m[s]=m[s] + 1;
         }
+        
+        /*
+        easier approach 
+           for(int i=0;i<n;i++){
+                     cin>>s;
+                    m[s]++; }
+
+        */
         
     }
     for(auto &it : m){
