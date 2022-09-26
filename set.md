@@ -64,3 +64,28 @@ Finding an element:
 set<int>::iterator itr=s.find(val); //Gives the iterator to the element val if it is found otherwise returns s.end() .
 Ex: set<int>::iterator itr=s.find(100); //If 100 is not present then it==s.end().
 ```
+
+
+## Examples
+### given n strings print given strings in lexographical order
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+//given n strings print given strings in lexographical order
+
+int main(){
+   set<string> s;
+   int n;
+   cin>>n;
+   string temp;
+   while(n--){
+       cin>>temp;
+       s.insert(temp);
+   }
+   for(auto val:s){
+       cout<<val<<endl;
+   }
+   
+    return 0;
+}
+```
