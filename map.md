@@ -97,3 +97,29 @@ void print_contents(map<int,int> &m)
    }
 }
 ```
+## map questions
+### print unique strings in lexographical order with frequency
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+//print unique string with their lexographical order with frequency
+int main(){
+    map<string,int> m;
+    int n=5;
+    string s;
+    for(int i=0;i<n;i++){
+        cin>>s;
+        auto it=m.find(s);
+        if(it==m.end()){
+            m[s]=1;
+        }
+        else{
+            m[s]=m[s] + 1;
+        }
+        
+    }
+    for(auto &it : m){
+        cout<<it.first<<" "<<it.second<<endl;
+    }
+}
+```
